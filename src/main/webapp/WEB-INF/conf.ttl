@@ -60,11 +60,11 @@
 ## 	IRIs namespace we use to replace the webapp base (eg. http://localhost:8080/lodview/), an
 ##	installation on dbpedia domain should use <http://dbpedia.org/resource/> 
 	
-	conf:IRInamespace <http://dbpedia.org/resource/>  ;
+	conf:IRInamespace <http://nubbekg.aksw.org/data/>  ;
 
 ## 	EndPoint
 
-	conf:endpoint <http://dbpedia.org/sparql>;
+	conf:endpoint <https://nubbekg.aksw.org/sparql>;
 	conf:endpointType "virtuoso"; 	## 	just "virtuoso" is handled right now, this will add some "rawdata" 
 									##	options in the footer, leave this blank if you don't want these links
 
@@ -144,7 +144,7 @@
 ##	if you are using a proxy, set it at <auto> for testing, an installation on dbpedia
 ##	domain should use <http://dbpedia.org/resource/>
 
-	conf:publicUrlPrefix <auto>; ## or <auto>
+	conf:publicUrlPrefix <https://nubbekg.aksw.org/data/>; ## or <auto>
 
 
 ## solve IRI issues in particular environments (proxypass, etc.)
@@ -153,7 +153,7 @@
 
 ##	home link (accessible from the banner)
 
-	conf:homeUrl <http://remember-to-change-this-in-conf.ttl>;
+	conf:homeUrl <http://nubbekg.aksw.org>;
 
   	
 ##	static resources publishing point, "staticResources/" is needed if you are going 
@@ -162,7 +162,7 @@
 ##	"http://data.yourdomain.com/staticResources/", on a test environment you can set it
 ##	at <auto>
  	
-	conf:staticResourceURL <auto>;
+	conf:staticResourceURL <https://nubbekg.aksw.org/data/staticResources/>;
 	
 ##  choosing the lower class in hierarchy to put it on the top right of the page
 ##	put in mainOntologies the prefixes you need to filter the resource's classes
