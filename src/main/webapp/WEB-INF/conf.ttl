@@ -52,6 +52,8 @@
 @prefix claros: <http://purl.org/NET/Claros/vocab#> .
 @prefix crm120111: <http://erlangen-crm.org/120111/> .
 @prefix rel: <http://purl.org/vocab/relationship/> .
+@prefix nubbe: <http://nubbekg.aksw.org/ontology#> .
+@prefix nubbedata: <http://nubbekg.aksw.org/data/> .
 
 
 <> a conf:Configuration;
@@ -60,7 +62,7 @@
 ## 	IRIs namespace we use to replace the webapp base (eg. http://localhost:8080/lodview/), an
 ##	installation on dbpedia domain should use <http://dbpedia.org/resource/> 
 	
-	conf:IRInamespace <http://nubbekg.aksw.org/data/>  ;
+	conf:IRInamespace <http://nubbekg.aksw.org>  ;
 
 ## 	EndPoint
 
@@ -144,7 +146,7 @@
 ##	if you are using a proxy, set it at <auto> for testing, an installation on dbpedia
 ##	domain should use <http://dbpedia.org/resource/>
 
-	conf:publicUrlPrefix <https://nubbekg.aksw.org/data/>; ## or <auto>
+	conf:publicUrlPrefix <https://nubbekg.aksw.org/>; ## or <auto>
 
 
 ## solve IRI issues in particular environments (proxypass, etc.)
@@ -162,14 +164,14 @@
 ##	"http://data.yourdomain.com/staticResources/", on a test environment you can set it
 ##	at <auto>
  	
-	conf:staticResourceURL <https://nubbekg.aksw.org/data/staticResources/>;
+	conf:staticResourceURL <https://nubbekg.aksw.org/staticResources/>;
 	
 ##  choosing the lower class in hierarchy to put it on the top right of the page
 ##	put in mainOntologies the prefixes you need to filter the resource's classes
 ##	you need also to add the ontology file in WEB-INF/ontologies
 ##	leave conf:mainOntologies blank if you don't want lodlive do this job 
 
-##	conf:mainOntologiesPrefixes	 YOUR-PREFIX:;	
+	conf:mainOntologiesPrefixes	 nubbe:, nubbedata:;	
 
 ##	document specific property used in the HTML resource page, it's possible to use
 ##	prefixes or not
