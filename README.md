@@ -5,7 +5,7 @@
 
 ```
 docker build -t lodview_nubbe .
-docker run -p 8083:8080 lodview_nubbe
+docker run -p 8083:8080 --restart=unless-stopped -d lodview_nubbe
 ```
 
 
